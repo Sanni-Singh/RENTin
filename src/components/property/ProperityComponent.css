@@ -9,6 +9,7 @@
 
 .properity{
     width: 90%;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 40px 0;
     display: flex;
@@ -16,6 +17,29 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+}
+
+.page{
+    display: flex;
+    gap: 1rem;
+    padding: 20px;
+}
+.like:hover {
+    background-color: rgb(95, 95, 217);
+    color: white;
+    border: none;
+}
+.all:hover {
+    background-color: rgb(95, 95, 217);
+    color: white;
+    border: none;
+}
+
+.all , .like{
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 .filter-box{

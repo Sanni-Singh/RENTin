@@ -6,7 +6,8 @@ import ProperityCard from '../ProperityCard/ProperityCard'
 import FooterComponent from '../Footer/FooterComponent'
 const ProperityComponent = ()=>{
     const [propertyList ,setProperityList] = useState(Data)
-
+    const [present , setPresent] = useState(true);
+    const [favList ,setFavList] = useState([]);
     const textRef = useRef('');
     const cityRef = useRef('');
     const PriceRef = useRef('');
@@ -61,6 +62,7 @@ const ProperityComponent = ()=>{
         }
         setProperityList(newData)
     }
+    
     return(
         <div className="property-container">
             <HeaderComponent/>
@@ -100,10 +102,15 @@ const ProperityComponent = ()=>{
                     
                 </div>
             </div>
+            <div className="page">
+                <p className="all" onClick={()=> setPresent(true)} style={{backgroundColor: present ? "blue" : "white" , color:present?"white" :"black"}}>All Properity</p>
+                <p className="like" onClick={()=> setPresent(false)} style={{backgroundColor: !present ? "blue" : "white" , color:!present?"white" :"black"}}>Like Properity</p>
+            </div>
 
             <div className="properity">
-                {propertyList.map((ele)=><ProperityCard key={ele.id} {...ele}/>)}
-                
+                {present && propertyList.map((ele)=><ProperityCard key={ele.id} {...ele} favList={favList} setFavList={setFavList}/>)}
+                {present && !favList && <h1>Fav Properity list is Empty</h1>}
+                {!present && favList.map((ele)=><ProperityCard key={ele.id} {...ele} favList={favList} setFavList={setFavList}/> )}
             </div>
 
             <FooterComponent/>

@@ -23,3 +23,12 @@
     color: blue;
     font-weight: 900;
 }
+.name-heart{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.heart{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
