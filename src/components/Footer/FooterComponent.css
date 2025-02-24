@@ -1,0 +1,39 @@
+.footer-container{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.foot{
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:750px) {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.copy-head{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.foot-copy{
+    color: #bab3b3;
+}
+.links{
+    display: flex;
+    gap: 1rem;
+}
+.ankar{
+    text-decoration: none;
+    color: #9c9999;
+}
