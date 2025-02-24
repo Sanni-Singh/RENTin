@@ -2,7 +2,7 @@
 
 Welcome to **Rent a Property**, a single-page real estate web application built with **React**. This project allows users to filter properties based on multiple criteria and add properties to their **Favorites** for easy access.
 
-##🌍 Live Demo
+## 🌍 Live Demo
 
 🔗 Live Project [Click Here To acces the app](https://rentin-ten.vercel.app/)
 
